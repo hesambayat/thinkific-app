@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { useUser } from './context/user-context'
+import * as Pages from './pages'
 
-function App() {
+const AuthenticatedRoutes = () => (
+  <Switch>
+    <Route path="/" exact component={Pages.Dashboard} />
+    <Route path="/edit/:courseId" component={Pages.EditCourse} />
+    <Route component={Pages.NotFound} />
+  </Switch>
+)
+
+const UnauthenticatedRoutes = () => (
+  <Route path="/" component={Pages.Login} />
+)
+
+export default () => {
+  const { user } = useUser()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      {user ? <AuthenticatedRoutes /> : <UnauthenticatedRoutes />}
+    </Router>
+  )
 }
-
-export default App;
