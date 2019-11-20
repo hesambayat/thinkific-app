@@ -1,0 +1,94 @@
+/* Base
+   ========================================================================== */
+
+ul,
+ol {
+  margin: 0 0 var(--spacing) var(--spacing);
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul.error-list {
+  color: var(--color--error);
+}
+
+ul.has-icons {
+  list-style: none;
+}
+
+ul.has-icons li {
+  position: relative;
+  padding-left: calc(var(--spacing) / 4);
+}
+
+ul.has-icons .icon {
+  position: absolute;
+  top: 0;
+  left: calc(var(--spacing) * -1);
+  line-height: var(--spacing);
+}
+
+ol {
+  list-style: decimal;
+  margin-left: var(--spacing);
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/**
+ * 1. Ensure images are scaled correctly.
+ * 2. Adhere to container width.
+ */
+img {
+  height: auto;
+  max-width: 100%; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+a {
+  color: var(--color--primary);
+  text-decoration: none;
+}
+
+a:focus {
+  color: var(--color--secondary);
+  outline: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+*:focus {
+  outline: none;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  display: block;
+  height: 0; /* 1 */
+  border: none;
+  border-top: 1px solid;
+  margin: calc(var(--spacing) - 1px) 0 var(--spacing);
+  overflow: visible; /* 2 */
+}
+
+::selection {
+  background: var(--color--body);
+  color: var(--color--body-background);
+}

@@ -1,0 +1,94 @@
+/* Heaader
+   ========================================================================== */
+
+.site-header {
+  position: relative;
+  padding-top: calc(var(--spacing) * 0.75);
+  padding-bottom: calc(var(--spacing) * 0.75);
+  border-bottom: 1px solid var(--color--tertiary);
+}
+
+.site-header button {
+  display: block;
+  width: 100%;
+  padding: 0 calc(var(--spacing) * 1.5);
+  line-height: calc(var(--spacing) * 1.75);
+  border: none;
+  font-size: 0.9rem;
+  text-align: left;
+  background: none;
+  background-color: var(--color--body-background);
+  background-size: calc(var(--spacing) * 0.5);
+  background-position: calc(var(--spacing) * 0.5) center;
+  background-repeat: no-repeat;
+  appearance: none;
+}
+
+.site-header ul button:hover {
+  background-color: var(--color--tertiary);
+}
+
+.site-header__user-nav .signout button {
+  background-image: url("../img/arrow.svg");
+}
+
+.site-header__user-nav {
+  position: absolute;
+  right: calc(var(--grid-gutter) * 0.5);
+  top: calc(100% + (var(--spacing) * 0.75));
+  min-width: calc(var(--spacing) * 10);
+  white-space: nowrap;
+  border: 1px solid var(--color--tertiary);
+  border-radius: 5px;
+  background-color: var(--color--body-background);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 20px 32px -8px;
+  transition: transform ease 0.1s, opacity ease 0.1s;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.site-header__user-nav.hide {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
+.site-header__user-nav__header {
+  padding: calc(var(--spacing) * 0.5) var(--spacing);
+  border-bottom: 1px solid var(--color--tertiary);
+  text-align: center;
+}
+
+.site-header__user-nav__header .avatar {
+  width: calc(var(--spacing) * 2);
+  height: calc(var(--spacing) * 2);
+  line-height: calc(var(--spacing) * 2);
+  font-size: 1.25rem;
+  margin: 0 auto calc(var(--spacing) * 0.5);
+}
+
+.site-header__user-nav__header span,
+.site-header__user-nav__header small {
+  display: block;
+}
+
+.site-header__user-nav__header small {
+  color: var(--color--body-alt);
+}
+
+.site-header__user-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-header .site-header__user-nav--close {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  z-index: 998;
+}

@@ -1,0 +1,31 @@
+/* Variables
+  ========================================================================== */
+
+:root {
+  /* Horizontal and vertical hierarchy */
+  --spacing: 1.5rem;
+  /* Grid default gutter */
+  --grid-gutter: 1.5rem;
+
+  /* Typography */
+  --font-family--primary: -apple-system, BlinkMacSystemFont, "segoe ui", Roboto , "helvetica neue" , Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+  --font-weight--primary-regular: 400;
+  --font-weight--primary-semibold: 500;
+  --font-weight--primary-bold: 700;
+
+  /* Colors */
+  --color--body: #12181f;
+  --color--body-alt: #b2b4b7;
+  --color--body-background: #ffffff;
+
+  --color--primary: #297cfb;
+  --color--secondary: #78708e;
+  --color--tertiary: #ebedf1;
+  --color--error: #ff3950;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --grid-gutter: 3rem;
+  }
+}

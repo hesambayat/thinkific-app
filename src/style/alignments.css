@@ -1,0 +1,49 @@
+/* Alignments
+   ========================================================================== */
+
+.alignleft {
+  display: block;
+  float: left;
+  margin-right: var(--spacing);
+}
+
+.alignright {
+  display: block;
+  float: right;
+  margin-left: var(--spacing);
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+.align-text-top {
+  vertical-align: text-top;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
