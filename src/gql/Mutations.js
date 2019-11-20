@@ -1,12 +1,34 @@
 import gql from 'graphql-tag'
 
 const CREATE_COURSE = gql`
-  mutation CreateUser($name: String!) {
+  mutation CreateCourse($name: String!) {
     createCourse(data: {
       name: $name
     }) {
       id
       name
+    }
+  }
+`
+
+const UPDATE_COURSE = gql`
+  mutation UpdateCourse($id: ID!, $name: String, $subtitle: String, $price: Float, $duration: Float, $desciption: String ) {
+    updateCourse(id: $id, data: {
+      name: $name
+      subtitle: $subtitle
+      price: $price
+      duration: $duration
+      desciption: $desciption
+    }) {
+      id
+    }
+  }
+`
+
+const DELETE_COURSE = gql`
+  mutation DeleteCourse($id: ID!) {
+    deleteCourse(id: $id) {
+      id
     }
   }
 `
@@ -40,4 +62,4 @@ const LOGIN = gql`
   }
 `
 
-export { CREATE_COURSE, CREATE_USER, LOGIN }
+export { CREATE_COURSE, UPDATE_COURSE, DELETE_COURSE, CREATE_USER, LOGIN }

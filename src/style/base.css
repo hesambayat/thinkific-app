@@ -1,6 +1,7 @@
 /* Base
    ========================================================================== */
 
+
 ul,
 ol {
   margin: 0 0 var(--spacing) var(--spacing);
@@ -83,7 +84,7 @@ hr {
   display: block;
   height: 0; /* 1 */
   border: none;
-  border-top: 1px solid;
+  border-top: 1px solid var(--color--tertiary);
   margin: calc(var(--spacing) - 1px) 0 var(--spacing);
   overflow: visible; /* 2 */
 }

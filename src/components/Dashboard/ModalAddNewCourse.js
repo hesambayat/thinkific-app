@@ -23,7 +23,7 @@ export default props => {
     <div className="row">
       <div className="col-12">
         <h4 className="mt-0 mb-0">Name your new course</h4>
-        <p style={{ color: 'var(--color--body-alt)' }}>
+        <p className="cba">
           <small>Don't worry, you can always change it later.</small>
         </p>
       </div>

@@ -4,6 +4,8 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="number"],
+textarea,
 select {
   display: block;
   padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.5);
@@ -35,6 +37,23 @@ input[type="password"] {
   background-image: url("../img/key.svg");
 }
 
+input[type="number"] {
+  background-image: url("../img/dialpad.svg");
+}
+
+input.with--timer-icon {
+  background-image: url("../img/timer.svg");
+}
+
+input.with--dollar-icon {
+  background-image: url("../img/dollar.svg");
+}
+
+textarea {
+  min-height: calc(var(--spacing) * 6);
+  resize: vertical;
+}
+
 select {
   padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.5) calc(var(--spacing) * 0.5) calc(var(--spacing) * 0.5);
   background-position: center right calc(var(--spacing) * 0.5);
@@ -44,13 +63,15 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
+input[type="number"]:focus,
 select:focus {
   background-color: var(--color--tertiary);
 }
 
 input[type="text"] + input,
 input[type="email"] + input,
-input[type="password"] + input {
+input[type="password"] + input,
+input[type="number"] + input {
   margin-top: -1px;
 }
 
@@ -92,6 +113,11 @@ input[type="password"] + input {
 .btn--secondary {
   color: var(--color--body-background);
   background: var(--color--secondary);
+}
+
+.btn--danger {
+  color: var(--color--body-background);
+  background: var(--color--error);
 }
 
 .btn--deactive {

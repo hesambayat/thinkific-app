@@ -21,9 +21,9 @@ export default props => {
               className="card"
               to={`/edit/${course.id}`}
             >
-              <span className="card__title h5 ellipsis">{course.name}</span>
+              <span className="card__title h5 ellipsis">{course.name || '(Untitled)'}</span>
               <span className="card__info ellipsis cba">
-                {course.duration && <span>{`${course.duration}min`}</span>}
+                {course.duration && <span>{`${course.duration} min`}</span>}
                 <span>{FormatMoney(course.price)}</span>
               </span>
             </Link>

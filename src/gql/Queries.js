@@ -7,7 +7,10 @@ const GET_COURSE = gql`
     }) {
       id
       name
+      subtitle
       price
+      desciption
+      duration
       captures {
         id
         order
@@ -32,6 +35,7 @@ const GET_PROFILE = gql`
         id
         name
         price
+        duration
         captures {
           id
           order

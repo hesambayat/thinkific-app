@@ -124,7 +124,8 @@
   color: inherit;
 }
 
-.card:hover,
+a.card:hover,
+button.card:hover,
 .card.btn:hover {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 20px 32px -8px;
 }
@@ -143,6 +144,30 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.editor-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.editor-navigation button {
+  display: block;
+  /* font-size: 0.875rem; */
+  font-weight: var(--font-weight--primary-semibold);
+  padding: calc(var(--spacing) * 0.5) var(--spacing);
+  line-height: var(--spacing);
+  border: none;
+  border-left: 4px solid transparent;
+  background: none;
+  color: var(--color--body-alt);
+}
+
+.editor-navigation .editor-navigation__active {
+  color: var(--color--body);
+  border-left-color: var(--color--tertiary);
+
 }
 
 .inline-loading {
