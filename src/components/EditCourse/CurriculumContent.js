@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import { useMutation } from '@apollo/react-hooks'
 import { Mutations } from '../../gql'
+import DeleteThisCapture from './DeleteThisCapture'
 
 export default props => {
   const title = useRef()
@@ -25,8 +26,17 @@ export default props => {
   }, [updateCapture, props])
   return (
     <div className="card">
+      <h4>Edit capture</h4>
       <label className="label">Capture title</label>
-      <input ref={title} onChange={updateCaptureCallback} type="text" placeholder={`Capture - ${props.active + 1}`} className="mb-2" />
+      <input ref={title} onChange={updateCaptureCallback} type="text" placeholder={`Capture - ${props.active + 1}`} className="mb-5" />
+      <div className="text-right mb-3">
+        <DeleteThisCapture {...props} />
+        <button
+          className="btn btn--deactive"
+        >
+          Add lesson
+        </button>
+      </div>
     </div>
   )
 }
