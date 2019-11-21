@@ -1,3 +1,7 @@
+# thinkific - The APP
+
+Link to the api repo [https://github.com/hesambayat/thinkific-api](https://github.com/hesambayat/thinkific-api)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
