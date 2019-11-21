@@ -8,7 +8,7 @@ import * as Components from '../components/EditCourse'
 
 export default props => {
   const [course, setCourse] = useState()
-  const [view, setView] = useState('Settings')
+  const [view, setView] = useState('Curriculum')
   const query = useQuery(Queries.GET_COURSE, { errorPolicy: 'all', fetchPolicy: 'no-cache', variables: { id: props.match.params.courseId } })
   useEffect(() => {
     if (!query.data) return

@@ -18,7 +18,7 @@ export default props => {
     price.current.value = props.course.price || '0.00'
     duration.current.value = props.course.duration || '0.0'
     description.current.value = props.course.desciption || ''
-  }, [])
+  }, [props.course])
   const [updateCourse, { error, loading }] = useMutation(Mutations.UPDATE_COURSE, { errorPolicy: 'all' })
   const updateCourseCallback = useCallback(() => {
     const variables = {
@@ -31,7 +31,7 @@ export default props => {
     }
     updateCourse({ variables })
     props.setCourse({ ...props.course, ...variables })
-  }, [updateCourse, props.setCourse, props.course, name, subtitle, price, duration, description])
+  }, [updateCourse, props, name, subtitle, price, duration, description])
   return (
     <div className="card">
       <div className="row">

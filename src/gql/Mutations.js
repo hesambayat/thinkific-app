@@ -12,7 +12,7 @@ const CREATE_COURSE = gql`
 `
 
 const UPDATE_COURSE = gql`
-  mutation UpdateCourse($id: ID!, $name: String, $subtitle: String, $price: Float, $duration: Float, $desciption: String ) {
+  mutation UpdateCourse($id: ID!, $name: String, $subtitle: String, $price: Float, $duration: Float, $desciption: String) {
     updateCourse(id: $id, data: {
       name: $name
       subtitle: $subtitle
@@ -29,6 +29,32 @@ const DELETE_COURSE = gql`
   mutation DeleteCourse($id: ID!) {
     deleteCourse(id: $id) {
       id
+    }
+  }
+`
+
+const CREATE_CAPTURE = gql`
+  mutation CreateCapture($courseId: ID!, $title: String!, $order: Int!) {
+    createCapture(courseId: $courseId, data: {
+      title: $title
+      order: $order
+    }) {
+      id
+      title
+      order
+    }
+  }
+`
+
+const UPDATE_CAPTURE = gql`
+  mutation UpdateCapture($courseId: ID!, $id: ID!, $title: String!, $order: Int!) {
+    updateCapture(courseId: $courseId, id: $id, data: {
+      title: $title
+      order: $order
+    }) {
+      id
+      title
+      order
     }
   }
 `
@@ -62,4 +88,4 @@ const LOGIN = gql`
   }
 `
 
-export { CREATE_COURSE, UPDATE_COURSE, DELETE_COURSE, CREATE_USER, LOGIN }
+export { CREATE_COURSE, UPDATE_COURSE, DELETE_COURSE, CREATE_CAPTURE, UPDATE_CAPTURE, CREATE_USER, LOGIN }

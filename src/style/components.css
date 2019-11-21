@@ -120,14 +120,29 @@
 .card:not(.btn) {
   border-radius: 5px;
   border: 1px solid var(--color--tertiary);
+  background-color: var(--color--body-background);
   text-align: left;
   color: inherit;
+}
+
+.card--active:not(.btn) {
+  border-color: var(--color--primary);
+  box-shadow: none !important;
 }
 
 a.card:hover,
 button.card:hover,
 .card.btn:hover {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 20px 32px -8px;
+}
+
+.card--draggable {
+  margin-bottom: var(--spacing);
+  padding-left: var(--grid-gutter);
+  background-repeat: no-repeat;
+  background-size: calc(var(--spacing) * 0.75);
+  background-position: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.125);
+  background-image: url("../img/more-vertical.svg");
 }
 
 .card__info span:not(:last-child)::after {

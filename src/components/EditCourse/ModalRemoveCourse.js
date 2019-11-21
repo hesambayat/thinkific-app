@@ -16,7 +16,7 @@ export default props => {
       unSetModal()
       props.history.push(`/`)
     })
-  }, [deleteCourse, unSetModal, props.history])
+  }, [deleteCourse, unSetModal, props.history, props.course.id])
 
   return (
     <div className="row">
